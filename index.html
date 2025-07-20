@@ -367,6 +367,64 @@
             text-align: center;
         }
         
+        /* Research Animation Gallery */
+        .research-animation-gallery {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .animation-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+        }
+        
+        .animation-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .animation-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .animation-caption {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .animation-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 0.95em;
+            margin-bottom: 5px;
+        }
+        
+        .animation-description {
+            color: #6c757d;
+            font-size: 0.85em;
+            line-height: 1.4;
+        }
+        
+        .research-animation-title {
+            color: #2c3e50;
+            font-size: 1.05em;
+            font-weight: bold;
+            margin: 20px 0 15px 0;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+            padding-top: 15px;
+        }
+        
         @media (max-width: 768px) {
             body {
                 padding: 15px;
@@ -407,11 +465,11 @@
     <header>
         <div class="profile-section">
             <!-- Uncomment and update the image path when you add your photo -->
-            <img src="images/profile.jpg" alt="Yu-Hao Tseng" class="profile-photo">
+            <!-- <img src="images/profile.jpg" alt="Yu-Hao Tseng" class="profile-photo"> -->
             <div class="header-text">
                 <h1>Yu-Hao Tseng</h1>
                 <div class="name-note">(Preferred name: Jaden Tseng)</div>
-                <div class="title">Ph.D. Candidate in Marine Environmental Informatics<br>National Taiwan Ocean University</div>
+                <div class="title">PhD Candidate in Marine Environmental Informatics<br>National Taiwan Ocean University</div>
             </div>
         </div>
         
@@ -420,7 +478,7 @@
             <a href="https://scholar.google.com/citations?user=_zozF1AAAAAJ" target="_blank">🎓 Google Scholar</a>
             <a href="https://www.researchgate.net/profile/Yu-Hao-Tseng" target="_blank">🔬 ResearchGate</a>
             <a href="https://www.linkedin.com/in/yuhao-tseng/" target="_blank">💼 LinkedIn</a>
-            <a href="https://github.com/ja754969" target="_blank">💻 GitHub</a>
+            <a href="https://github.com/yourgithub" target="_blank">💻 GitHub</a>
         </div>
     </header>
 
@@ -428,7 +486,7 @@
         <section class="section">
             <div class="current-status">
                 <h3>🎯 Current Status</h3>
-                <p>PhD candidate researching Kuroshio Current dynamics and oceanic-atmospheric interactions using satellite remote sensing and reanalysis data</p>
+                <p>PhD candidate researching Kuroshio Current dynamics and oceanic-atmospheric interactions using satellite remote sensing and numerical modeling</p>
             </div>
         </section>
 
@@ -436,7 +494,7 @@
             <div class="intro">
                 Hi, I'm a highly motivated marine environmental scientist with advanced training in physical oceanography, remote sensing, and quantitative analysis of oceanic and atmospheric processes. 
                 <br><br>
-                My research focuses on understanding mesoscale to large-scale ocean current dynamics, particularly the <strong>Kuroshio Current system</strong> and its impact on regional oceanography. I specialize in satellite data interpretation, conducting advanced analyses of sea surface temperature, chlorophyll-a concentrations, precipitation patterns, and geostrophic currents. My work combines observational data from autonomous ocean robotics with remotely sensed satellite data and reanalysis data to advance our understanding of air-sea interactions and their role in climate dynamics.
+                My research focuses on understanding mesoscale to large-scale ocean current dynamics, particularly the <strong>Kuroshio Current system</strong> and its impact on regional oceanography. I specialize in satellite data interpretation, conducting advanced analyses of sea surface temperature, chlorophyll-a concentrations, precipitation patterns, and geostrophic currents. My work combines observational data from autonomous ocean robotics with remotely sensed satellite data and numerical ocean-atmosphere models to advance our understanding of air-sea interactions and their role in climate dynamics.
             </div>
         </section>
 
@@ -462,6 +520,32 @@
                     <div class="publication-details"><strong>Tseng, Yu-Hao</strong>, Ho, C.-R., Zheng, Q., & Zheng, Z.-W. (2025)</div>
                     <div class="publication-details"><em>Journal of Geophysical Research: Oceans</em>, 130(2), e2024JC021572</div>
                     <a href="https://doi.org/10.1029/2024JC021572" target="_blank" class="publication-link">View Publication</a>
+                    
+                    <!-- Research Animation Gallery -->
+                    <div class="research-animation-title">🌊 Research Visualization</div>
+                    <div class="research-animation-gallery">
+                        <div class="animation-item">
+                            <img src="images/kuroshio-cutoff-animation.gif" alt="Kuroshio Cut-off Event Animation">
+                            <div class="animation-caption">
+                                <div class="animation-title">Kuroshio Cut-off Event</div>
+                                <div class="animation-description">Satellite observation of mesoscale cyclonic eddy cutting off the Kuroshio main path east of Taiwan</div>
+                            </div>
+                        </div>
+                        <div class="animation-item">
+                            <img src="images/loop-current-formation.gif" alt="Loop Current Formation Animation">
+                            <div class="animation-caption">
+                                <div class="animation-title">Loop Current Formation</div>
+                                <div class="animation-description">Development of intensified loop currents in the Luzon Strait following cut-off events</div>
+                            </div>
+                        </div>
+                        <div class="animation-item">
+                            <img src="images/vorticity-evolution.gif" alt="Vorticity Evolution Animation">
+                            <div class="animation-caption">
+                                <div class="animation-title">Vorticity Evolution</div>
+                                <div class="animation-description">Changes in negative vorticity in the northern South China Sea during PDO phases</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="publication">
@@ -491,20 +575,20 @@
                 <div class="photo-gallery-title">📸 Research Grant Highlights</div>
                 <div class="photo-gallery">
                     <div class="gallery-item">
-                        <img src="images/toefl-award-ceremony_1.jpg" alt="TOEFL ITP Award Ceremony">
+                        <img src="images/toefl-award-ceremony.jpg" alt="TOEFL Award Ceremony">
                         <div class="gallery-caption">Award Ceremony</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/toefl-award-ceremony_2.jpg" alt="TOEFL ITP Award Ceremony">
-                        <div class="gallery-caption">Award Ceremony</div>
+                        <img src="images/research-presentation.jpg" alt="Research Presentation">
+                        <div class="gallery-caption">Research Presentation</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/toefl-award-ceremony_3.jpg" alt="TOEFL ITP Award Ceremony">
-                        <div class="gallery-caption">Award Ceremony</div>
+                        <img src="images/lab-work.jpg" alt="Laboratory Work">
+                        <div class="gallery-caption">Laboratory Work</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/toefl-award-ceremony_4.jpg" alt="TOEFL ITP Award Ceremony">
-                        <div class="gallery-caption">Award Ceremony</div>
+                        <img src="images/fieldwork.jpg" alt="Ocean Fieldwork">
+                        <div class="gallery-caption">Ocean Fieldwork</div>
                     </div>
                 </div>
             </div>
@@ -549,7 +633,7 @@
                 
                 <div class="skill-category">
                     <h3>Specializations</h3>
-                    <div class="skill-list">Satellite Data Analysis, Remote Sensing, Physical Oceanography</div>
+                    <div class="skill-list">Satellite Data Analysis, Ocean Modeling, Remote Sensing, Physical Oceanography</div>
                 </div>
                 
                 <div class="skill-category">
@@ -559,7 +643,7 @@
                 
                 <div class="skill-category">
                     <h3>Research Areas</h3>
-                    <div class="skill-list">Kuroshio Current, Climate Effects on Ocean Currents, Ocean currents dynamics</div>
+                    <div class="skill-list">Kuroshio Current, Air-Sea Interactions, Ocean-Atmosphere Modeling</div>
                 </div>
             </div>
         </section>

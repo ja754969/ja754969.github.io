@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Yu-Hao Tseng</title>
+    <meta name="description" content="Academic publications by Yu-Hao Tseng - research in physical oceanography and remote sensing">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        
+        /* Navigation Menu */
+        .nav-menu {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+        
+        .nav-menu a {
+            color: #495057;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-menu a:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .nav-menu a.active {
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+            font-weight: 300;
+            color: #2c3e50;
+            letter-spacing: -1px;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            margin: 40px 0;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #e74c3c, #f39c12);
+        }
+        
+        .publication {
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #3498db;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        
+        .publication:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        
+        .publication-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+            line-height: 1.4;
+        }
+        
+        .publication-authors {
+            color: #495057;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+        
+        .publication-authors .author-highlight {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .publication-journal {
+            color: #6c757d;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .publication-details {
+            color: #6c757d;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+        
+        .publication-links {
+            margin-top: 15px;
+        }
+        
+        .publication-links a {
+            color: #3498db;
+            text-decoration: none;
+            padding: 6px 12px;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        
+        .publication-links a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .metrics {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .metrics h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .metric-item {
+            display: inline-block;
+            margin: 0 20px;
+            text-align: center;
+        }
+        
+        .metric-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+            display: block;
+        }
+        
+        .metric-label {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        
+        .conference-presentation {
+            background: #f1f8ff;
+            border: 1px solid #c8e6ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 5px solid #0084ff;
+        }
+        
+        .presentation-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .presentation-details {
+            color: #6c757d;
+            font-size: 0.95em;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-top:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #ecf0f1;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .nav-menu a {
+                display: block;
+                margin: 5px 0;
+            }
+            
+            .metric-item {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+        <a href="../index.html">Home</a>
+        <a href="index.html" class="active">Publications</a>
+        <a href="../cv/">CV</a>
+    </nav>
+
+    <header>
+        <h1>Publications</h1>
+        <div class="subtitle">Research contributions in marine environmental science</div>
+    </header>
+
+    <main>
+        <!-- Publication Metrics -->
+        <div class="metrics">
+            <h3>📊 Research Impact</h3>
+            <div class="metric-item">
+                <span class="metric-number">3</span>
+                <span class="metric-label">Peer-reviewed Articles</span>
+            </div>
+            <div class="metric-item">
+                <span class="metric-number">5</span>
+                <span class="metric-label">Conference Presentations</span>
+            </div>
+            <div class="metric-item">
+                <span class="metric-number">1</span>
+                <span class="metric-label">Journal Review</span>
+            </div>
+        </div>
+
+        <!-- Peer-reviewed Publications -->
+        <section class="section">
+            <h2>📚 Peer-reviewed Articles</h2>
+            
+            <div class="publication">
+                <div class="publication-title">Loop Current West of the Luzon Strait Triggered by Kuroshio Cut-off Events East of Taiwan Island</div>
+                <div class="publication-authors"><span class="author-highlight">Tseng, Yu-Hao</span>, Ho, C.-R., Zheng, Q., & Zheng, Z.-W.</div>
+                <div class="publication-journal">Journal of Geophysical Research: Oceans</div>
+                <div class="publication-details">Volume 130, Issue 2, Article e2024JC021572, 2025</div>
+                <div class="publication-links">
+                    <a href="https://doi.org/10.1029/2024JC021572" target="_blank">📄 DOI</a>
+                    <a href="#" target="_blank">📖 PDF</a>
+                    <a href="#" target="_blank">📊 Supplementary</a>
+                </div>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-title">Analysis of Wind–Wave Relationship in Taiwan Waters</div>
+                <div class="publication-authors">Cheng, K.-H., Chang, C.-H., Yang, Y.-C., <span class="author-highlight">Tseng, Yu-Hao</span>, Ho, C.-R., Hsu, T.-W., & Doong, D.-J.</div>
+                <div class="publication-journal">Journal of Marine Science and Engineering</div>
+                <div class="publication-details">Volume 13, Issue 6, Article 1047, 2025</div>
+                <div class="publication-links">
+                    <a href="https://doi.org/10.3390/jmse13061047" target="_blank">📄 DOI</a>
+                    <a href="#" target="_blank">📖 PDF</a>
+                    <a href="#" target="_blank">💾 Data</a>
+                </div>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-title">Characteristic Analysis of Sea Surface Currents around Taiwan Island from CODAR Observations</div>
+                <div class="publication-authors"><span class="author-highlight">Tseng, Yu-Hao</span>, Lu, C.-Y., Zheng, Q., & Ho, C.-R.</div>
+                <div class="publication-journal">Remote Sensing</div>
+                <div class="publication-details">Volume 13, Issue 15, Article 3025, 2021</div>
+                <div class="publication-links">
+                    <a href="https://doi.org/10.3390/rs13153025" target="_blank">📄 DOI</a>
+                    <a href="#" target="_blank">📖 PDF</a>
+                    <a href="#" target="_blank">🔬 Code</a>
+                    <a href="#" target="_blank">💾 Data</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conference Presentations -->
+        <section class="section">
+            <h2>🎤 Conference Presentations</h2>
+            
+            <div class="conference-presentation">
+                <div class="presentation-title">Ocean-Atmosphere Interactions and Kuroshio Dynamics</div>
+                <div class="presentation-details">EGU General Assembly 2025, Vienna, Austria (Poster Presentation)</div>
+            </div>
+            
+            <div class="conference-presentation">
+                <div class="presentation-title">Remote Sensing Applications in Physical Oceanography</div>
+                <div class="presentation-details">Asian Conference on Remote Sensing (ACRS) 2024, Taiwan (Oral Presentation)</div>
+            </div>
+            
+            <div class="conference-presentation">
+                <div class="presentation-title">Satellite Observations of Kuroshio Cut-off Events</div>
+                <div class="presentation-details">Asia-Pacific Remote Sensing Symposium (APRS) 2024, Taiwan (Poster Presentation)</div>
+            </div>
+            
+            <div class="conference-presentation">
+                <div class="presentation-title">Sea Surface Current Analysis using HF Radar Data</div>
+                <div class="presentation-details">EGU General Assembly 2024, Vienna, Austria (Poster Presentation)</div>
+            </div>
+            
+            <div class="conference-presentation">
+                <div class="presentation-title">Physical Oceanography of Taiwan Strait</div>
+                <div class="presentation-details">EGU General Assembly 2023, Vienna, Austria (Poster Presentation)</div>
+            </div>
+        </section>
+
+        <!-- In Preparation -->
+        <section class="section">
+            <h2>🔬 Manuscripts in Preparation</h2>
+            
+            <div class="publication">
+                <div class="publication-title">Pacific Decadal Oscillation Influence on Kuroshio Cut-off Events: A Satellite-based Analysis</div>
+                <div class="publication-authors"><span class="author-highlight">Tseng, Yu-Hao</span>, Ho, C.-R., & Zheng, Z.-W.</div>
+                <div class="publication-journal">Target: Journal of Physical Oceanography</div>
+                <div class="publication-details">Manuscript in preparation (Expected submission: 2025)</div>
+            </div>
+        </section>
+
+        <!-- External Links -->
+        <section class="section">
+            <h2>🔗 Academic Profiles</h2>
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="https://scholar.google.com/citations?user=_zozF1AAAAAJ" target="_blank" 
+                   style="display: inline-block; margin: 10px 15px; padding: 12px 25px; background: #4285f4; color: white; text-decoration: none; border-radius: 5px; font-weight: 500;">
+                    🎓 Google Scholar
+                </a>
+                <a href="https://www.researchgate.net/profile/Yu-Hao-Tseng" target="_blank" 
+                   style="display: inline-block; margin: 10px 15px; padding: 12px 25px; background: #00ccbb; color: white; text-decoration: none; border-radius: 5px; font-weight: 500;">
+                    🔬 ResearchGate
+                </a>
+                <a href="https://orcid.org/your-orcid-id" target="_blank" 
+                   style="display: inline-block; margin: 10px 15px; padding: 12px 25px; background: #a6ce39; color: white; text-decoration: none; border-radius: 5px; font-weight: 500;">
+                    🆔 ORCID
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to top">
+        ↑
+    </button>
+
+    <footer class="footer">
+        <p>© 2025 Yu-Hao Tseng (Jaden). Last updated: July 2025</p>
+    </footer>
+</body>
+</html>

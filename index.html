@@ -17,6 +17,38 @@
             background-color: #ffffff;
         }
         
+        /* Navigation Menu */
+        .nav-menu {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+        
+        .nav-menu a {
+            color: #495057;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-menu a:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .nav-menu a.active {
+            background-color: #2c3e50;
+            color: white;
+        }
+        
         header {
             text-align: center;
             margin-bottom: 50px;
@@ -355,6 +387,13 @@
     </style>
 </head>
 <body>
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+        <a href="index.html" class="active">Home</a>
+        <a href="publications/">Publications</a>
+        <a href="cv/">CV</a>
+    </nav>
+
     <header>
         <div class="profile-section">
             <!-- Uncomment and update the image path when you add your photo -->
@@ -379,7 +418,7 @@
         <section class="section">
             <div class="current-status">
                 <h3>🎯 Current Status</h3>
-                <p>Ph.D. candidate researching Kuroshio Current dynamics and oceanic-atmospheric interactions using satellite remote sensing and reanalysis data</p>
+                <p>PhD candidate researching Kuroshio Current dynamics and oceanic-atmospheric interactions using satellite remote sensing and reanalysis data</p>
             </div>
         </section>
 
